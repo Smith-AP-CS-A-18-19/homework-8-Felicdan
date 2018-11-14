@@ -1,37 +1,48 @@
 public class Homework8 {
-
+	private int[] arr;
 	/* Finish the constructor and create any necessary instance
 	 * variables. A Homework8 object should have an array that
 	 * holds n int values
 	 */
 	public Homework8(int n) {
-
+		this.arr = new int[n];
 	}
 
 	/* Return the stored array
 	 */
 	public int[] problem1() {
-
+		return arr;
 	}
 
 	/* Fill the stored array with the provided int
 	 */
 	public void problem2(int n) {
-
+		for (int i = 0; i < arr.length; i++){
+			arr[i] = n;
+		}
 	}
 
 	/* Fill the stored array. The first value should be
 	 * n, the second n-1, the third n-2, etc.
 	 */
 	public void problem3(int n) {
-
+		for(int i = 0; i < arr.length; i++){
+			arr[i] = n;
+			n -= 1;
+		}
 	}
 
 	/* Find and return the maximum value in the
 	 * provided array
 	 */
 	public double problem4(double[] arr) {
-
+		double max = arr[0];
+    for(int i = 1; i < arr.length; i++){
+      if (i > max){
+        max = arr[i];
+      }
+    }
+    return max;
 	}
 
 	/* Find and return the index of num in the
@@ -39,7 +50,14 @@ public class Homework8 {
 	 * is not in the array
 	 */
 	public int problem5(int[] arr, int num) {
-
+		for(int i : arr){
+			if(num == arr[i]){
+				return num;
+			} else {
+				return -1;
+		}
+	}
+	return 2;
 	}
 
 	public static void main(String[] args) {
