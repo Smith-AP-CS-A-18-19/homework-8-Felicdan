@@ -38,6 +38,9 @@ public class Homework8 {
 	public double problem4(double[] arr) {
 		double max = arr[0];
     for(int i = 1; i < arr.length; i++){
+		/* This should be checking to see if
+		 * arr[i] > max, not i > max
+		 */
       if (i > max){
         max = arr[i];
       }
@@ -54,6 +57,10 @@ public class Homework8 {
 			if(num == arr[i]){
 				return num;
 			} else {
+				/* The return statement should be outside
+				 * the for loop; if the loop finishes,
+				 * then the value was not in the array
+				 */
 				return -1;
 		}
 	}
